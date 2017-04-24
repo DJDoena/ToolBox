@@ -1,6 +1,8 @@
-﻿namespace DoenaSoft.ToolBox.Generics
+﻿using System;
+
+namespace DoenaSoft.ToolBox.Generics
 {
-    public sealed class EventArgs<T>
+    public sealed class EventArgs<T> : EventArgs
     {
         public T Value { get; private set; }
 
