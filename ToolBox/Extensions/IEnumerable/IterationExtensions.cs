@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace DoenaSoft.ToolBox.Extensions
 {
     /// <summary />
-    public static class EnumerableExtensions
+    public static class IterationExtensions
     {
         /// <summary>
         /// Executes an action on each item of a list.

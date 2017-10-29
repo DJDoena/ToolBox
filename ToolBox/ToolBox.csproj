@@ -67,7 +67,7 @@
     <Compile Include="Commands\ParameterizedRelayCommand.cs" />
     <Compile Include="Commands\RelayCommand.cs" />
     <Compile Include="Commands\RelayCommandAsync.cs" />
-    <Compile Include="Extensions\IEnumerable\EnumerableExtensions.cs" />
+    <Compile Include="Extensions\IEnumerable\IterationExtensions.cs" />
     <Compile Include="Generics\EventArgsT.cs" />
     <Compile Include="Extensions\IEnumerable\CastExtensions.cs" />
     <Compile Include="Extensions\IEnumerable\CountExtensions.cs" />
