@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace DoenaSoft.ToolBox.Extensions
+﻿namespace DoenaSoft.ToolBox.Extensions
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     /// <summary />
     public static class CastExtensions
     {

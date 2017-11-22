@@ -1,11 +1,11 @@
-﻿using System;
-using System.Windows.Threading;
-
-namespace DoenaSoft.ToolBox.Threading
+﻿namespace DoenaSoft.ToolBox.Threading
 {
+    using System;
+    using System.Windows.Threading;
+
     public sealed class Synchronizer : ISynchronizer
     {
-        private readonly Dispatcher Dispatcher;
+        private Dispatcher Dispatcher { get; }
 
         public Synchronizer(Dispatcher dispatcher)
         {

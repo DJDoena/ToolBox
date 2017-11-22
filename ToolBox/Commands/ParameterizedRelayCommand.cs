@@ -1,21 +1,16 @@
-﻿using System;
-
-namespace DoenaSoft.ToolBox.Commands
+﻿namespace DoenaSoft.ToolBox.Commands
 {
+    using System;
+
     public sealed class ParameterizedRelayCommand : AbstractParameterizedRelayCommand
     {
-        private readonly Action<Object> ExecuteCallback;
+        private Action<Object> ExecuteCallback { get; }
 
         public ParameterizedRelayCommand(Action<Object> executeCallback
             , Func<Object, Boolean> canExecuteCallback = null)
             : base(canExecuteCallback)
         {
-            if (executeCallback == null)
-            {
-                throw (new ArgumentNullException(nameof(executeCallback)));
-            }
-
-            ExecuteCallback = executeCallback;
+            ExecuteCallback = executeCallback ?? throw (new ArgumentNullException(nameof(executeCallback)));
         }
 
         #region ICommand 

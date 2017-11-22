@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
-
-namespace DoenaSoft.ToolBox.Extensions
+﻿namespace DoenaSoft.ToolBox.Extensions
 {
+    using System.Collections.Generic;
+
     /// <summary />
     public static class ObjectExtensions
     {

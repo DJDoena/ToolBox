@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-
-namespace DoenaSoft.ToolBox.Extensions
+﻿namespace DoenaSoft.ToolBox.Extensions
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+
     /// <summary />
     public static class SplitExtensions
     {
@@ -28,9 +28,9 @@ namespace DoenaSoft.ToolBox.Extensions
             //otherwise the predicate would always be checked twice.
             //First when the user of the method iterates over the trueList
             //Second when the user of the method iterates over the falseList
-            
+
             trueList = source.Where(predicate).ToList();
-            
+
             falseList = source.Except(trueList).ToList();
         }
 

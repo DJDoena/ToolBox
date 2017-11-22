@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace DoenaSoft.ToolBox.Extensions
+﻿namespace DoenaSoft.ToolBox.Extensions
 {
+    using System;
+
     /// <summary />
     public static class StringExtensions
     {

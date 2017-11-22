@@ -1,16 +1,16 @@
-﻿using System;
-using System.IO;
-using System.Text;
-using System.Xml;
-using System.Xml.Serialization;
-
-namespace DoenaSoft.ToolBox.Generics
+﻿namespace DoenaSoft.ToolBox.Generics
 {
+    using System;
+    using System.IO;
+    using System.Text;
+    using System.Xml;
+    using System.Xml.Serialization;
+
     public static class Serializer<T> where T : class, new()
     {
         private static XmlSerializer s_XmlSerializer;
 
-        private static readonly Encoding DefaultEncoding;
+        private static Encoding DefaultEncoding { get; }
 
         static Serializer()
         {
@@ -21,7 +21,7 @@ namespace DoenaSoft.ToolBox.Generics
         {
             get
             {
-                if (s_XmlSerializer == null)    
+                if (s_XmlSerializer == null)
                 {
                     s_XmlSerializer = new XmlSerializer(typeof(T));
                 }

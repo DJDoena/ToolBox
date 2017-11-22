@@ -1,11 +1,11 @@
-﻿using System;
-using System.Windows.Input;
-
-namespace DoenaSoft.ToolBox.Commands
+﻿namespace DoenaSoft.ToolBox.Commands
 {
+    using System;
+    using System.Windows.Input;
+
     public abstract class AbstractRelayCommand : ICommand
     {
-        private readonly Func<Boolean> CanExecuteCallback;
+        private Func<Boolean> CanExecuteCallback { get; }
 
         protected AbstractRelayCommand(Func<Boolean> canExecuteCallback = null)
         {

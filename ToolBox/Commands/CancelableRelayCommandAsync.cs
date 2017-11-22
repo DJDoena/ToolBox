@@ -1,13 +1,13 @@
-﻿using System;
-using System.Threading;
-using System.Threading.Tasks;
-using System.Windows.Input;
-
-namespace DoenaSoft.ToolBox.Commands
+﻿namespace DoenaSoft.ToolBox.Commands
 {
+    using System;
+    using System.Threading;
+    using System.Threading.Tasks;
+    using System.Windows.Input;
+
     public sealed class CancelableCommandAsync : AbstractRelayCommand, ICancelableCommand
     {
-        private readonly Action<CancellationToken> ExecuteCallback;
+        private Action<CancellationToken> ExecuteCallback { get; }
 
         public CancellationTokenSource CancellationTokenSource { get; set; }
 
@@ -15,12 +15,7 @@ namespace DoenaSoft.ToolBox.Commands
             , Func<Boolean> canExecuteCallback = null)
             : base(canExecuteCallback)
         {
-            if (executeCallback == null)
-            {
-                throw (new ArgumentNullException(nameof(executeCallback)));
-            }
-
-            ExecuteCallback = executeCallback;
+            ExecuteCallback = executeCallback ?? throw (new ArgumentNullException(nameof(executeCallback)));
         }
 
         #region ICommand

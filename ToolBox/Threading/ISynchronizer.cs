@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace DoenaSoft.ToolBox.Threading
+﻿namespace DoenaSoft.ToolBox.Threading
 {
+    using System;
+
     public interface ISynchronizer
     {
         void InvokeOnUIThread(Action action);

@@ -1,21 +1,16 @@
-﻿using System;
-
-namespace DoenaSoft.ToolBox.Commands
+﻿namespace DoenaSoft.ToolBox.Commands
 {
+    using System;
+
     public class RelayCommand : AbstractRelayCommand
     {
-        protected readonly Action ExecuteCallback;
+        protected Action ExecuteCallback { get; }
 
         public RelayCommand(Action executeCallback
             , Func<Boolean> canExecuteCallback = null)
             : base(canExecuteCallback)
         {
-            if (executeCallback == null)
-            {
-                throw (new ArgumentNullException(nameof(executeCallback)));
-            }
-
-            ExecuteCallback = executeCallback;
+            ExecuteCallback = executeCallback ?? throw (new ArgumentNullException(nameof(executeCallback)));
         }
 
         #region ICommand

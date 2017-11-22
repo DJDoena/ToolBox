@@ -1,9 +1,9 @@
-﻿using System;
-using System.Threading.Tasks;
-using System.Windows.Input;
-
-namespace DoenaSoft.ToolBox.Commands
+﻿namespace DoenaSoft.ToolBox.Commands
 {
+    using System;
+    using System.Threading.Tasks;
+    using System.Windows.Input;
+
     public sealed class RelayCommandAsync : RelayCommand
     {
         public RelayCommandAsync(Action executeCallback
