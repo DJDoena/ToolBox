@@ -27,7 +27,7 @@
         /// <param name="parameter">not used</param>
         /// <returns>true if this command can be executed; otherwise, false</returns>
         public Boolean CanExecute(Object parameter)
-            => ((CanExecuteCallback != null) ? CanExecuteCallback() : true);
+            => (CanExecuteCallback != null) ? CanExecuteCallback() : true;
 
         /// <summary>
         /// Defines the method to be called when the command is invoked.

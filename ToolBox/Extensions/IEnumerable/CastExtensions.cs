@@ -17,7 +17,7 @@
         /// <param name="source">the original list</param>
         /// <returns>a list of successfully casted objects</returns>
         public static IEnumerable<TResult> TryCast<TSource, TResult>(this IEnumerable<TSource> source)
-            => (source.OfType<TResult>());
+            => source.OfType<TResult>();
 
         /// <summary>
         /// Tries to cast the objects of a given list to a given type and returns the successfully and unsuccessfully casted objects in two lists.

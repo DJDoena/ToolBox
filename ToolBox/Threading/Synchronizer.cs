@@ -26,7 +26,7 @@
         /// </summary>
         /// <param name="func">The function</param>
         public T InvokeOnUIThread<T>(Func<T> func)
-          => (Dispatcher.CheckAccess() ? func() : Dispatcher.Invoke(func));
+          => Dispatcher.CheckAccess() ? func() : Dispatcher.Invoke(func);
 
         /// <summary>
         /// Invokes an action on the UI thread.

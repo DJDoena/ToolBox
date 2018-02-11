@@ -16,7 +16,7 @@
         /// <returns>if a list has at least n items</returns>
         public static Boolean HastAtLeastItems<TSource>(this IEnumerable<TSource> source
             , Int32 count)
-            => ((source.Take(count).Count() == count));
+            => (source.Take(count).Count() == count);
 
         /// <summary>
         /// Determines whether a sequence contains any elements.
@@ -25,7 +25,7 @@
         /// <param name="source">The <see cref="IEnumerable{T}" /> to check for emptiness</param>
         /// <returns>true if the source sequence contains any elements; otherwise, false</returns>
         public static Boolean HasItems<TSource>(this IEnumerable<TSource> source)
-            => (source.Any());
+            => source.Any();
 
         /// <summary>
         /// Checks if a list has at least n items that matches the predicate.
@@ -38,7 +38,7 @@
         public static Boolean HastAtLeastItemsWhere<TSource>(this IEnumerable<TSource> source
             , Func<TSource, Boolean> predicate
             , Int32 count)
-            => (source.Where(predicate).HastAtLeastItems(count));
+            => source.Where(predicate).HastAtLeastItems(count);
 
         /// <summary>
         /// Determines whether any element of a sequence satisfies a condition.
@@ -49,7 +49,7 @@
         /// <returns>true if any elements in the source sequence pass the test in the specified predicate; otherwise, false</returns>
         public static Boolean HasItemsWhere<TSource>(this IEnumerable<TSource> source
             , Func<TSource, Boolean> predicate)
-            => (source.Any(predicate));
+            => source.Any(predicate);
 
         /// <summary>
         /// Computes the sum of a sequence of <see cref="UInt32" /> values.
@@ -57,7 +57,7 @@
         /// <param name="source">A sequence of <see cref="UInt32" /> values to calculate the sum of</param>
         /// <returns>The sum of the values in the sequence</returns>
         public static UInt32 Sum(this IEnumerable<UInt32> source)
-            => (source.Sum(i => i));
+            => source.Sum(i => i);
 
         /// <summary>
         /// Computes the sum of the sequence of <see cref="UInt32" /> values that are obtained by invoking a transform function on each element of the input sequence.

@@ -41,7 +41,7 @@
         /// <returns>An <see cref="IEnumerable{TResult}" /> whose elements are the result of invoking the transform function on each element of source</returns>
         public static IEnumerable<TResult> ForEach<TSource, TResult>(this IEnumerable<TSource> source
             , Func<TSource, TResult> selector)
-            => (source.Select(selector));
+            => source.Select(selector);
 
         /// <summary>
         /// Ensures that a given <see cref="IEnumerable{T}"/> is never null.
@@ -50,6 +50,6 @@
         /// <param name="source">the original list</param>
         /// <returns>a valid object reference</returns>
         public static IEnumerable<TSource> EnsureNotNull<TSource>(this IEnumerable<TSource> source)
-            => (source ?? Enumerable.Empty<TSource>());
+            => source ?? Enumerable.Empty<TSource>();
     }
 }

@@ -56,7 +56,7 @@
         /// <param name="textReader">The TextReader</param>
         /// <returns>An instance of <typeparamref name="T"/></returns>
         public static T Deserialize(TextReader textReader)
-            => ((T)(XmlSerializer.Deserialize(textReader)));
+            => (T)(XmlSerializer.Deserialize(textReader));
 
         /// <summary>
         /// Deserializes the content of <paramref name="stream"/> the data structure <typeparamref name="T"/>.
@@ -64,7 +64,7 @@
         /// <param name="stream">The stream</param>
         /// <returns>An instance of <typeparamref name="T"/></returns>
         public static T Deserialize(Stream stream)
-            => ((T)(XmlSerializer.Deserialize(stream)));
+            => (T)(XmlSerializer.Deserialize(stream));
 
         /// <summary>
         /// Serializes an instance of the data structure <typeparamref name="T"/> into a file.

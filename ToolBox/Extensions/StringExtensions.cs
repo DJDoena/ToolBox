@@ -13,7 +13,7 @@
         /// <param name="value">the string to test</param>
         /// <returns>true if the value parameter is null or an empty string (""); otherwise, false</returns>
         public static Boolean IsEmpty(this String value)
-            => (String.IsNullOrEmpty(value));
+            => String.IsNullOrEmpty(value);
 
         /// <summary>
         /// Inversion of <see cref="String.IsNullOrEmpty(String)"/>.
@@ -21,7 +21,7 @@
         /// <param name="value">the string to test</param>
         /// <returns>true if the value parameter is not null and not an empty string (""); otherwise, false</returns>
         public static Boolean IsNotEmpty(this String value)
-            => (value.IsEmpty() == false);
+            => value.IsEmpty() == false;
 
         /// <summary>
         /// Replaces all characters in a string that are not allowed in a file name with a replacement character.
