@@ -44,7 +44,7 @@
                 throw (new ArgumentException("Replacement character is also an invalid file name character", nameof(replacement)));
             }
 
-            String newFileName = new String(fileName.ForEach(original => invalidFileNameChars.Contains(original) ? replacement : original).ToArray());
+            String newFileName = new String(fileName.Select(original => invalidFileNameChars.Contains(original) ? replacement : original).ToArray());
 
             return (newFileName);
         }
@@ -70,7 +70,7 @@
                 throw (new ArgumentException("Replacement character is also an invalid path character", nameof(replacement)));
             }
 
-            String newPath = new String(path.ForEach(original => invalidPathChars.Contains(original) ? replacement : original).ToArray());
+            String newPath = new String(path.Select(original => invalidPathChars.Contains(original) ? replacement : original).ToArray());
 
             return (newPath);
         }

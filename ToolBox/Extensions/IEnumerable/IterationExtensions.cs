@@ -32,18 +32,6 @@
         }
 
         /// <summary>
-        /// Projects each element of a sequence into a new form.
-        /// </summary>
-        /// <typeparam name="TSource">The type of the elements of source</typeparam>
-        /// <typeparam name="TResult">The type of the value returned by selector</typeparam>
-        /// <param name="source">A sequence of values to invoke a transform function on</param>
-        /// <param name="selector">A transform function to apply to each element</param>
-        /// <returns>An <see cref="IEnumerable{TResult}" /> whose elements are the result of invoking the transform function on each element of source</returns>
-        public static IEnumerable<TResult> ForEach<TSource, TResult>(this IEnumerable<TSource> source
-            , Func<TSource, TResult> selector)
-            => source.Select(selector);
-
-        /// <summary>
         /// Ensures that a given <see cref="IEnumerable{T}"/> is never null.
         /// </summary>
         /// <typeparam name="TSource">the type of the list items</typeparam>
