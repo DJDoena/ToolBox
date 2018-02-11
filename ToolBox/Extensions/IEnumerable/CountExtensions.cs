@@ -22,7 +22,7 @@
         /// Determines whether a sequence contains any elements.
         /// </summary>
         /// <typeparam name="TSource">The type of the elements of source</typeparam>
-        /// <param name="source">The <see cref="System.Collections.Generic.IEnumerable{T}" /> to check for emptiness</param>
+        /// <param name="source">The <see cref="IEnumerable{T}" /> to check for emptiness</param>
         /// <returns>true if the source sequence contains any elements; otherwise, false</returns>
         public static Boolean HasItems<TSource>(this IEnumerable<TSource> source)
             => (source.Any());
@@ -52,15 +52,15 @@
             => (source.Any(predicate));
 
         /// <summary>
-        /// Computes the sum of a sequence of <see cref="System.UInt32" /> values.
+        /// Computes the sum of a sequence of <see cref="UInt32" /> values.
         /// </summary>
-        /// <param name="source">A sequence of <see cref="System.UInt32" /> values to calculate the sum of</param>
+        /// <param name="source">A sequence of <see cref="UInt32" /> values to calculate the sum of</param>
         /// <returns>The sum of the values in the sequence</returns>
         public static UInt32 Sum(this IEnumerable<UInt32> source)
             => (source.Sum(i => i));
 
         /// <summary>
-        /// Computes the sum of the sequence of <see cref="System.UInt32" /> values that are obtained by invoking a transform function on each element of the input sequence.
+        /// Computes the sum of the sequence of <see cref="UInt32" /> values that are obtained by invoking a transform function on each element of the input sequence.
         /// </summary>
         /// <typeparam name="TSource"></typeparam>
         /// <param name="source">A sequence of values that are used to calculate a sum</param>

@@ -5,13 +5,24 @@
     using System.Threading.Tasks;
     using System.Windows.Input;
 
-    public sealed class CancelableCommandAsync : AbstractRelayCommand, ICancelableCommand
+    /// <summary>
+    /// An asynchronous command which can be cancelled.
+    /// </summary>
+    public sealed class CancelableRelayCommandAsync : AbstractRelayCommand, ICancelableCommand
     {
         private Action<CancellationToken> ExecuteCallback { get; }
 
-        public CancellationTokenSource CancellationTokenSource { get; set; }
+        /// <summary>
+        /// Signals to a <see cref="CancellationToken"/> that it should be canceled.
+        /// </summary>
+        public CancellationTokenSource CancellationTokenSource { get; private set; }
 
-        public CancelableCommandAsync(Action<CancellationToken> executeCallback
+        /// <summary>
+        /// Constructor.
+        /// </summary>
+        /// <param name="executeCallback">Defines the method to be called when the command is invoked</param>
+        /// <param name="canExecuteCallback">Defines the method that determines whether the command can execute in its current state</param>
+        public CancelableRelayCommandAsync(Action<CancellationToken> executeCallback
             , Func<Boolean> canExecuteCallback = null)
             : base(canExecuteCallback)
         {
@@ -20,6 +31,9 @@
 
         #region ICommand
 
+        /// <summary>
+        /// Defines the method to be called when the command is invoked.
+        /// </summary>
         public override void Execute(Object parameter)
         {
             CancellationTokenSource = null;

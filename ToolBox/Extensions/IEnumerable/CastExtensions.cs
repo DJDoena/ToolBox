@@ -2,6 +2,7 @@
 {
     using System;
     using System.Collections.Generic;
+    using System.Globalization;
     using System.Linq;
 
     /// <summary />
@@ -9,7 +10,7 @@
     {
         /// <summary>
         /// Returns a list of objects that could be cast to the given type.
-        /// <remarks><see cref="System.Globalization.CultureInfo.InvariantCulture"/></remarks>
+        /// <remarks><see cref="CultureInfo.InvariantCulture"/></remarks>
         /// </summary>
         /// <typeparam name="TSource">the type of the list items</typeparam>
         /// <typeparam name="TResult">the type of the cast</typeparam>

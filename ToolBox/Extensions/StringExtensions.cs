@@ -44,12 +44,7 @@
                 throw (new ArgumentException("Replacement character is also an invalid file name character", nameof(replacement)));
             }
 
-            String newFileName = fileName;
-
-            foreach (Char invalid in invalidFileNameChars)
-            {
-                newFileName = newFileName.Replace(invalid, replacement);
-            }
+            String newFileName = new String(fileName.ForEach(original => invalidFileNameChars.Contains(original) ? replacement : original).ToArray());
 
             return (newFileName);
         }
@@ -75,12 +70,7 @@
                 throw (new ArgumentException("Replacement character is also an invalid path character", nameof(replacement)));
             }
 
-            String newPath = path;
-
-            foreach (Char invalid in invalidPathChars)
-            {
-                newPath = newPath.Replace(invalid, replacement);
-            }
+            String newPath = new String(path.ForEach(original => invalidPathChars.Contains(original) ? replacement : original).ToArray());
 
             return (newPath);
         }
