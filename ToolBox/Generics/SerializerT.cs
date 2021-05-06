@@ -94,12 +94,15 @@
         {
             encoding = encoding ?? DefaultEncoding;
 
-            using (XmlTextWriter xtw = new XmlTextWriter(stream, encoding))
+            using (XmlWriter xw = XmlWriter.Create(stream, new XmlWriterSettings()
             {
-                xtw.Formatting = Formatting.Indented;
-                xtw.Namespaces = false;
-
-                Serialize(xtw, instance);
+                CheckCharacters = true,
+                Encoding = encoding,
+                Indent = true,
+                NamespaceHandling = NamespaceHandling.OmitDuplicates,
+            }))
+            {
+                Serialize(xw, instance);
             }
         }
 

@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31019.35
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBox", "ToolBox\ToolBox.csproj", "{4782E10E-B5CC-4C2D-9D7F-D132CB5A50A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBox.Tests", "ToolBox.Tests\ToolBox.Tests.csproj", "{3AE22204-A1B2-4283-B005-2304B4A2928C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,8 +23,18 @@ Global
 		{4782E10E-B5CC-4C2D-9D7F-D132CB5A50A0}.Release|x64.Build.0 = Release|x64
 		{4782E10E-B5CC-4C2D-9D7F-D132CB5A50A0}.Release|x86.ActiveCfg = Release|x86
 		{4782E10E-B5CC-4C2D-9D7F-D132CB5A50A0}.Release|x86.Build.0 = Release|x86
+		{3AE22204-A1B2-4283-B005-2304B4A2928C}.Debug|x64.ActiveCfg = Debug|x64
+		{3AE22204-A1B2-4283-B005-2304B4A2928C}.Debug|x64.Build.0 = Debug|x64
+		{3AE22204-A1B2-4283-B005-2304B4A2928C}.Debug|x86.ActiveCfg = Debug|x86
+		{3AE22204-A1B2-4283-B005-2304B4A2928C}.Debug|x86.Build.0 = Debug|x86
+		{3AE22204-A1B2-4283-B005-2304B4A2928C}.Release|x64.ActiveCfg = Debug|x64
+		{3AE22204-A1B2-4283-B005-2304B4A2928C}.Release|x64.Build.0 = Debug|x64
+		{3AE22204-A1B2-4283-B005-2304B4A2928C}.Release|x86.ActiveCfg = Debug|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {55D1A1FF-C58A-4E24-B12D-453AED44388C}
 	EndGlobalSection
 EndGlobal
