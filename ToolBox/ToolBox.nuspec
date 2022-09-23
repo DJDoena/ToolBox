@@ -8,7 +8,7 @@
     <icon>images\djdsoft.png</icon>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <license type="expression">MIT</license>
-    <projectUrl>https://github.com/DJDoena/DoenaSoft.ToolBox</projectUrl>
+    <projectUrl>https://github.com/DJDoena/ToolBox</projectUrl>
     <description>List of useful classes for WPF, XMl serialization and Linq</description>
     <copyright>2016 - 2022</copyright>
     <tags>WPF, XML-serialization, Linq</tags>
