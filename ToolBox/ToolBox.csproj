@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DoenaSoft.ToolBox</RootNamespace>
-    <AssemblyName>ToolBox</AssemblyName>
+    <AssemblyName>DoenaSoft.ToolBox</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile>
@@ -27,7 +27,7 @@
     <DebugType>full</DebugType>
     <PlatformTarget>x86</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-    <DocumentationFile>bin\x86\Debug\ToolBox.xml</DocumentationFile>
+    <DocumentationFile>bin\x86\Debug\DoenaSoft.ToolBox.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>bin\x86\Release\</OutputPath>
@@ -36,7 +36,7 @@
     <DebugType>pdbonly</DebugType>
     <PlatformTarget>x86</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-    <DocumentationFile>bin\x86\Release\ToolBox.xml</DocumentationFile>
+    <DocumentationFile>bin\x86\Release\DoenaSoft.ToolBox.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
     <DebugSymbols>true</DebugSymbols>
@@ -45,7 +45,7 @@
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-    <DocumentationFile>bin\x64\Debug\ToolBox.xml</DocumentationFile>
+    <DocumentationFile>bin\x64\Debug\DoenaSoft.ToolBox.xml</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <OutputPath>bin\x64\Release\</OutputPath>
@@ -54,7 +54,7 @@
     <DebugType>full</DebugType>
     <PlatformTarget>x64</PlatformTarget>
     <ErrorReport>prompt</ErrorReport>
-    <DocumentationFile>bin\x64\Release\ToolBox.xml</DocumentationFile>
+    <DocumentationFile>bin\x64\Release\DoenaSoft.ToolBox.xml</DocumentationFile>
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
@@ -85,9 +85,12 @@
     <Compile Include="Threading\Synchronizer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ToolBox.nuspec" />
     <None Include="ToolBox.snk" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="djdsoft.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

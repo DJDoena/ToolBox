@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>DoenaSoft.ToolBox</id>
+    <version>1.0.5</version>
+    <title>DoenaSoft.ToolBox</title>
+    <authors>DJ Doena.</authors>
+    <icon>images\icon.png</icon>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/DJDoena/DoenaSoft.ToolBox</projectUrl>
+    <description>List of useful classes for WPF, XMl serialization and Linq</description>
+    <copyright>2016 - 2022</copyright>
+    <tags>WPF, XML-serialization, Linq</tags>
+  </metadata>
+  <files>
+    <file src="bin\x64\Release\DoenaSoft.ToolBox.dll" target="lib\net452\DoenaSoft.ToolBox.dll" />
+    <file src="bin\x64\Release\DoenaSoft.ToolBox.xml" target="lib\net452\DoenaSoft.ToolBox.xml" />
+    <file src="djdsoft.png" target="images\" />
+</files>
+</package>
