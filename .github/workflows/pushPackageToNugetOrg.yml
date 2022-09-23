@@ -5,7 +5,7 @@ name: NuGet Generation for DoenaSoft.ToolBox
 on:
   push:
     branches:
-      - main
+      - master
       
 env:
   SOURCE_URL: https://api.nuget.org/v3/index.json
