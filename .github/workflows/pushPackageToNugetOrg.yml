@@ -1,6 +1,6 @@
 #In this script it is important to set the RepositoryUrl in the *.csproj file
 
-name: NuGet Generation for DoenaSoft
+name: NuGet Generation for DoenaSoft.ToolBox
 
 on:
   push:
