@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>DoenaSoft.ToolBox</id>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <title>DoenaSoft.ToolBox</title>
     <authors>DJ Doena</authors>
     <icon>images\djdsoft.png</icon>
@@ -14,8 +14,14 @@
     <tags>WPF, XML-serialization, Linq</tags>
   </metadata>
   <files>
-    <file src="bin\x64\Release\DoenaSoft.ToolBox.dll" target="lib\net452\DoenaSoft.ToolBox.dll" />
-    <file src="bin\x64\Release\DoenaSoft.ToolBox.xml" target="lib\net452\DoenaSoft.ToolBox.xml" />
+    <file src="bin\x64\Release\DoenaSoft.ToolBox.dll" target="build\x64\DoenaSoft.ToolBox.dll" />
+    <file src="bin\x64\Release\DoenaSoft.ToolBox.xml" target="build\x64\DoenaSoft.ToolBox.xml" />
+
+    <file src="bin\x86\Release\DoenaSoft.ToolBox.dll" target="build\x86\DoenaSoft.ToolBox.dll" />
+    <file src="bin\x86\Release\DoenaSoft.ToolBox.xml" target="build\x86\DoenaSoft.ToolBox.xml" />
+
+    <file src="DoenaSoft.AbstractionLayer.props" target="build\net452" />
+
     <file src="djdsoft.png" target="images\" />
 </files>
 </package>

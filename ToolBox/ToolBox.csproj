@@ -85,6 +85,7 @@
     <Compile Include="Threading\Synchronizer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="DoenaSoft.ToolBox.props" />
     <None Include="ToolBox.nuspec" />
     <None Include="ToolBox.snk" />
   </ItemGroup>
