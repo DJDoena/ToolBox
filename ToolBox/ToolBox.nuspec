@@ -20,7 +20,7 @@
     <file src="bin\x86\Release\DoenaSoft.ToolBox.dll" target="build\x86\DoenaSoft.ToolBox.dll" />
     <file src="bin\x86\Release\DoenaSoft.ToolBox.xml" target="build\x86\DoenaSoft.ToolBox.xml" />
 
-    <file src="DoenaSoft.AbstractionLayer.props" target="build\net452" />
+    <file src="DoenaSoft.ToolBox.props" target="build\net452" />
 
     <file src="djdsoft.png" target="images\" />
 </files>
