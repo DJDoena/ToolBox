@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>DoenaSoft.ToolBox</id>
-    <version>1.0.7</version>
+    <version>1.0.8</version>
     <title>DoenaSoft.ToolBox</title>
     <authors>DJ Doena</authors>
     <icon>images\djdsoft.png</icon>
@@ -19,6 +19,9 @@
 
     <file src="bin\x86\Release\DoenaSoft.ToolBox.dll" target="build\x86\DoenaSoft.ToolBox.dll" />
     <file src="bin\x86\Release\DoenaSoft.ToolBox.xml" target="build\x86\DoenaSoft.ToolBox.xml" />
+
+    <file src="bin\Release\DoenaSoft.ToolBox.dll" target="build\DoenaSoft.ToolBox.dll" />
+    <file src="bin\Release\DoenaSoft.ToolBox.xml" target="build\DoenaSoft.ToolBox.xml" />
 
     <file src="DoenaSoft.ToolBox.props" target="build\net452" />
 
