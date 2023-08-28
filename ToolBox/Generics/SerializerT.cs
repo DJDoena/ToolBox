@@ -1,11 +1,10 @@
-﻿namespace DoenaSoft.ToolBox.Generics
-{
-    using System;
-    using System.IO;
-    using System.Text;
-    using System.Xml;
-    using System.Xml.Serialization;
+﻿using System.IO;
+using System.Text;
+using System.Xml;
+using System.Xml.Serialization;
 
+namespace DoenaSoft.ToolBox.Generics
+{
     /// <summary>
     /// Generic Serializer which contains methods to (de)serialize data structures to and from XML.
     /// </summary>
@@ -42,7 +41,7 @@
         /// </summary>
         /// <param name="fileName">The file name</param>
         /// <returns>An instance of <typeparamref name="T"/></returns>
-        public static T Deserialize(String fileName)
+        public static T Deserialize(string fileName)
         {
             using (FileStream fs = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.Read))
             {
@@ -72,11 +71,11 @@
         /// <param name="fileName">The file name</param>
         /// <param name="instance">The data structure</param>
         /// <param name="encoding">The text encoding. Optional; if null then <see cref="Encoding.UTF8" /> is used.</param>
-        public static void Serialize(String fileName
+        public static void Serialize(string fileName
             , T instance
             , Encoding encoding = null)
         {
-            using (FileStream fs = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.Read))
+            using (var fs = new FileStream(fileName, FileMode.Create, FileAccess.Write, FileShare.Read))
             {
                 Serialize(fs, instance, encoding);
             }
@@ -94,7 +93,7 @@
         {
             encoding = encoding ?? DefaultEncoding;
 
-            using (XmlWriter xw = XmlWriter.Create(stream, new XmlWriterSettings()
+            using (var xw = XmlWriter.Create(stream, new XmlWriterSettings()
             {
                 CheckCharacters = true,
                 Encoding = encoding,
@@ -114,9 +113,9 @@
         public static void Serialize(XmlWriter xmlWriter
             , T instance)
         {
-            XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
+            var ns = new XmlSerializerNamespaces();
 
-            ns.Add(String.Empty, String.Empty);
+            ns.Add(string.Empty, string.Empty);
 
             XmlSerializer.Serialize(xmlWriter, instance, ns);
         }
@@ -127,12 +126,12 @@
         /// <param name="text">The text</param>
         /// <param name="encoding">The text encoding. Optional; if null then <see cref="Encoding.UTF8" /> is used.</param>
         /// <returns>An instance of <typeparamref name="T"/></returns>
-        public static T FromString(String text
+        public static T FromString(string text
             , Encoding encoding = null)
         {
             encoding = encoding ?? DefaultEncoding;
 
-            using (Stream ms = new MemoryStream(encoding.GetBytes(text)))
+            using (var ms = new MemoryStream(encoding.GetBytes(text)))
             {
                 return (Deserialize(ms));
             }
@@ -144,12 +143,12 @@
         /// <param name="instance">The data structure</param>
         /// <param name="encoding">The text encoding. Optional; if null then <see cref="Encoding.UTF8" /> is used.</param>
         /// <returns></returns>
-        public static String ToString(T instance
+        public static string ToString(T instance
             , Encoding encoding = null)
         {
             encoding = encoding ?? DefaultEncoding;
 
-            using (MemoryStream ms = new MemoryStream())
+            using (var ms = new MemoryStream())
             {
                 Serialize(ms, instance, encoding);
 

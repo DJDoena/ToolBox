@@ -1,9 +1,9 @@
-﻿namespace DoenaSoft.ToolBox.Extensions
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
+namespace DoenaSoft.ToolBox.Extensions
+{
     /// <summary />
     public static class IterationExtensions
     {

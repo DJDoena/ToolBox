@@ -1,10 +1,9 @@
-﻿namespace DoenaSoft.ToolBox.Extensions
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Globalization;
-    using System.Linq;
+﻿using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
 
+namespace DoenaSoft.ToolBox.Extensions
+{
     /// <summary />
     public static class CastExtensions
     {
@@ -31,7 +30,7 @@
         public static void TryCast<TSource, TResult>(this IEnumerable<TSource> source
             , out IEnumerable<TResult> castedList
             , out IEnumerable<TSource> uncastedList
-            , Boolean noNullsInUncastedList = false)
+            , bool noNullsInUncastedList = false)
         {
             castedList = source.TryCast<TSource, TResult>();
 
@@ -47,7 +46,7 @@
         /// <param name="noNullsInUncastedList">determines if the returned list can contain null values</param>
         /// <returns>a list of unsuccessfully casted objects</returns>
         public static IEnumerable<TSource> GetUncastable<TSource, TResult>(this IEnumerable<TSource> source
-            , Boolean noNullsInUncastedList = false)
+            , bool noNullsInUncastedList = false)
         {
             IEnumerable<TSource> filtered = source.Where(item => ((item is TResult) == false));
 
@@ -56,7 +55,7 @@
                 filtered = filtered.Where(item => (item != null));
             }
 
-            return (filtered);
+            return filtered;
         }
     }
 }

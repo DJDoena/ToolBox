@@ -1,7 +1,7 @@
-﻿namespace DoenaSoft.ToolBox.Extensions
-{
-    using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
+namespace DoenaSoft.ToolBox.Extensions
+{
     /// <summary />
     public static class ObjectExtensions
     {
@@ -18,7 +18,7 @@
                 yield break;
             }
 
-            yield return (o);
+            yield return o;
         }
 
         /// <summary>
@@ -36,7 +36,7 @@
 
             foreach (TSource o in objects)
             {
-                yield return (o);
+                yield return o;
             }
         }
     }

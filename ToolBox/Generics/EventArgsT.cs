@@ -1,7 +1,7 @@
-﻿namespace DoenaSoft.ToolBox.Generics
-{
-    using System;
+﻿using System;
 
+namespace DoenaSoft.ToolBox.Generics
+{
     /// <summary>
     /// Generic EventArgs which can carry a value.
     /// </summary>
@@ -19,7 +19,7 @@
         /// <param name="value">The value to be send with the event</param>
         public EventArgs(T value)
         {
-            Value = value;
+            this.Value = value;
         }
     }
 }

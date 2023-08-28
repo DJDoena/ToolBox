@@ -1,9 +1,9 @@
-﻿namespace DoenaSoft.ToolBox.Extensions
-{
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
+namespace DoenaSoft.ToolBox.Extensions
+{
     /// <summary />
     public static class SplitExtensions
     {
@@ -20,7 +20,7 @@
         /// <param name="trueList">the true results</param>
         /// <param name="falseList">the false results</param>
         public static void SplitOptimized<TSource>(this IEnumerable<TSource> source
-            , Func<TSource, Boolean> predicate
+            , Func<TSource, bool> predicate
             , out List<TSource> trueList
             , out List<TSource> falseList)
         {
@@ -43,7 +43,7 @@
         /// <param name="trueList">the true results</param>
         /// <param name="falseList">the false results</param>
         public static void Split<TSource>(this IEnumerable<TSource> source
-            , Func<TSource, Boolean> predicate
+            , Func<TSource, bool> predicate
             , out IEnumerable<TSource> trueList
             , out IEnumerable<TSource> falseList)
         {
