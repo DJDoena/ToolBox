@@ -20,10 +20,11 @@
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>XML-serialization; Linq</PackageTags>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Version>2.0.1</Version>
-		<FileVersion>2.0.1</FileVersion>
+		<Version>2.0.2</Version>
+		<FileVersion>2.0.2</FileVersion>
 		<DebugType>portable</DebugType>
 		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
 	</PropertyGroup>
 
 	<ItemGroup>
