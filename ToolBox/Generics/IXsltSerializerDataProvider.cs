@@ -3,9 +3,7 @@
 /// <summary>
 /// Interface to provide the XSLT prefix and suffix for the XsltSerializer
 /// </summary>
-/// <typeparam name="T">Type of the data structure</typeparam>
-public interface IXsltSerializerDataProvider<T>
-    where T : class, new()
+public interface IXsltSerializerDataProvider
 {
     /// <summary>
     /// Returns the XSLT prefix.

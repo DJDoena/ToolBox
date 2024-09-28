@@ -18,16 +18,16 @@ public static class XmlSerializer<T>
     /// </summary>
     public static Encoding DefaultEncoding { get; }
 
-    static XmlSerializer()
-    {
-        DefaultEncoding = Encoding.UTF8;
-    }
-
     /// <summary>
     /// The XmlSerializer primed for the data structure <typeparamref name="T"/>.
     /// </summary>
     public static XmlS.XmlSerializer Serializer
         => _serializer ??= new(typeof(T));
+
+    static XmlSerializer()
+    {
+        DefaultEncoding = Encoding.UTF8;
+    }
 
     /// <summary>
     /// Deserializes the content of <paramref name="fileName"/> into the data structure <typeparamref name="T"/>.

@@ -1,6 +1,6 @@
 ﻿using System.Text;
 using System.Xml;
-using System.Xml.Serialization;
+using XmlS = System.Xml.Serialization;
 
 namespace DoenaSoft.ToolBox.Generics;
 
@@ -9,21 +9,33 @@ namespace DoenaSoft.ToolBox.Generics;
 /// </summary>
 /// <typeparam name="T"></typeparam>
 public sealed class XsltSerializer<T>
-    where T : class, new()
+    where T : class
 {
-    private readonly IXsltSerializerDataProvider<T> _dataProvider;
+    private static XmlS.XmlSerializer _serializer;
+
+    private readonly IXsltSerializerDataProvider _dataProvider;
 
     /// <summary>
     /// Returns the enocding used when none is given
     /// </summary>
-    public static Encoding DefaultEncoding
-        => XmlSerializer<T>.DefaultEncoding;
+    public static Encoding DefaultEncoding { get; }
+
+    /// <summary>
+    /// The XmlSerializer primed for the data structure <typeparamref name="T"/>.
+    /// </summary>
+    public static XmlS.XmlSerializer Serializer
+        => _serializer ??= new(typeof(T));
+
+    static XsltSerializer()
+    {
+        DefaultEncoding = Encoding.UTF8;
+    }
 
     /// <summary>
     /// Consturctor
     /// </summary>
     /// <param name="dataProvider">the data profiler for the XSLT prefix and suffix</param>
-    public XsltSerializer(IXsltSerializerDataProvider<T> dataProvider)
+    public XsltSerializer(IXsltSerializerDataProvider dataProvider)
     {
         _dataProvider = dataProvider;
     }
@@ -67,7 +79,7 @@ public sealed class XsltSerializer<T>
 
         using var writer = XmlWriter.Create(ms, settings);
 
-        XmlSerializer<T>.Serializer.Serialize(writer, instance, new XmlSerializerNamespaces(new[] { XmlQualifiedName.Empty }));
+        Serializer.Serialize(writer, instance, new XmlS.XmlSerializerNamespaces(new[] { XmlQualifiedName.Empty }));
 
         var xml = encoding.GetString(ms.ToArray());
 
