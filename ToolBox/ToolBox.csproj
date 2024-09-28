@@ -1,30 +1,32 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
+		<AssemblyName>DoenaSoft.ToolBox</AssemblyName>
+		<RootNamespace>DoenaSoft.ToolBox</RootNamespace>
+		<OutputType>Library</OutputType>
 		<TargetFrameworks>netstandard2.0</TargetFrameworks>
 		<Platforms>AnyCPU</Platforms>
-		<OutputType>Library</OutputType>
-		<RootNamespace>DoenaSoft.ToolBox</RootNamespace>
-		<AssemblyName>DoenaSoft.ToolBox</AssemblyName>
 		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<ImplicitUsings>true</ImplicitUsings>
+		<DebugType>portable</DebugType>
+		<IncludeSymbols>true</IncludeSymbols>
+		<LangVersion>10.0</LangVersion>
 		<SignAssembly>True</SignAssembly>
 		<AssemblyOriginatorKeyFile>ToolBox.snk</AssemblyOriginatorKeyFile>
 		<Title>DoenaSoft.ToolBox</Title>
-		<Company>Doena Soft.</Company>
-		<Authors>DJ Doena</Authors>
-		<Description>List of useful classes for XML serialization and Linq</Description>
-		<Copyright>2016 - 2023</Copyright>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/DJDoena/ToolBox</PackageProjectUrl>
-		<PackageIcon>djdsoft.png</PackageIcon>
 		<RepositoryUrl>https://github.com/DJDoena/ToolBox</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
 		<PackageTags>XML-serialization; Linq</PackageTags>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<Version>2.0.2</Version>
-		<FileVersion>2.0.2</FileVersion>
-		<DebugType>portable</DebugType>
-		<IncludeSymbols>true</IncludeSymbols>
+		<PackageIcon>djdsoft.png</PackageIcon>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<Description>List of useful classes for XML serialization and Linq</Description>
+		<Company>Doena Soft.</Company>
+		<Authors>DJ Doena</Authors>
+		<Copyright>2016 - 2024</Copyright>
+		<Version>3.0.0</Version>
+		<FileVersion>3.0.0</FileVersion>
 	</PropertyGroup>
 
 	<ItemGroup>
