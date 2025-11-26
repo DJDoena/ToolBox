@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="ToolBox.Tests/ToolBox.Tests.csproj" />
+  <Project Path="ToolBox/ToolBox.csproj" />
+</Solution>
