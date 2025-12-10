@@ -52,6 +52,14 @@ public static class XmlSerializer<T>
         => (T)Serializer.Deserialize(textReader);
 
     /// <summary>
+    /// Deserializes the content of <paramref name="xmlReader"/> the data structure <typeparamref name="T"/>.
+    /// </summary>
+    /// <param name="xmlReader">The XmlReader</param>
+    /// <returns>An instance of <typeparamref name="T"/></returns>
+    public static T Deserialize(XmlReader xmlReader)
+        => (T)Serializer.Deserialize(xmlReader);
+
+    /// <summary>
     /// Deserializes the content of <paramref name="stream"/> the data structure <typeparamref name="T"/>.
     /// </summary>
     /// <param name="stream">The stream</param>

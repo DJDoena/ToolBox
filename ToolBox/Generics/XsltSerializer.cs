@@ -63,6 +63,27 @@ public sealed class XsltSerializer<T>
         sw.Write(_dataProvider.GetSuffix());
     }
 
+    /// <summary>
+    /// Deserializes the content of <paramref name="fileName"/> into the data structure <typeparamref name="T"/>.
+    /// </summary>
+    /// <param name="fileName">The file name</param>
+    /// <returns>An instance of <typeparamref name="T"/></returns>
+    public static T Deserialize(string fileName)
+    {
+        using var fileStream = new FileStream(fileName, FileMode.Open, FileAccess.Read, FileShare.None);
+
+        var settings = new XmlReaderSettings()
+        {
+            DtdProcessing = DtdProcessing.Ignore,
+        };
+
+        using var xmlReader = XmlReader.Create(fileStream, settings);
+
+        var result = (T)Serializer.Deserialize(xmlReader);
+
+        return result;
+    }
+
     private static string GetXmlString(T instance)
     {
         using var ms = new MemoryStream();
@@ -79,7 +100,7 @@ public sealed class XsltSerializer<T>
 
         using var writer = XmlWriter.Create(ms, settings);
 
-        Serializer.Serialize(writer, instance, new XmlS.XmlSerializerNamespaces(new[] { XmlQualifiedName.Empty }));
+        Serializer.Serialize(writer, instance, new XmlS.XmlSerializerNamespaces([XmlQualifiedName.Empty]));
 
         var xml = encoding.GetString(ms.ToArray());
 
